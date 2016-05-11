@@ -1,5 +1,6 @@
 #include "GCM.h"
 
+#define  INPUT_LENGTH 20
 
 #if defined(DEBUG)
 static int countY = 0;
@@ -379,7 +380,7 @@ int main(){
             'n', 'k', '0', '1'
     };*/
 
-    size_t length = 20;
+    size_t length = INPUT_LENGTH;
     /*uint8_t input[BLOCK_CIPHER_BLOCK_SIZE*3+DEFAULT_IV_LEN] = {
             0xd9, 0x31, 0x32, 0x25, 0xf8, 0x84, 0x06, 0xe5, 0xa5, 0x59, 0x09, 0xc5, 0xaf, 0xf5, 0x26, 0x9a,
             0x86, 0xa7, 0xa9, 0x53, 0x15, 0x34, 0xf7, 0xda, 0x2e, 0x4c, 0x30, 0x3d, 0x8a, 0x31, 0x8a, 0x72,
@@ -389,7 +390,7 @@ int main(){
             'z', 'h', 'e', 'n', 'g', 'y', 'u', 'k', 'u', 'n', '2', '0', '1', '1', '0', '1', '1', '3', '8', '4'};
     /*,'z', 'h', 'e', 'n', 'g', 'y', 'u', 'k', 'u', 'n', '2', '0', '1', '1', '0', '1', '1', '3', '8', '4',
     'z', 'h', 'e', 'n', 'g', 'y', 'u', 'k', 'u', 'n', '2', '0', '1', '1', '0', '1', '1', '3', '8', '4'};*/
-    uint8_t output[20];//[BLOCK_CIPHER_BLOCK_SIZE*3+DEFAULT_IV_LEN];
+    uint8_t output[INPUT_LENGTH];//[BLOCK_CIPHER_BLOCK_SIZE*3+DEFAULT_IV_LEN];
     size_t add_len = BLOCK_CIPHER_BLOCK_SIZE+4;
     uint8_t add[BLOCK_CIPHER_BLOCK_SIZE+4] = {
             0xfe, 0xed, 0xfa, 0xce, 0xde, 0xad, 0xbe, 0xef, 0xfe, 0xed, 0xfa, 0xce, 0xde, 0xad, 0xbe, 0xef,
